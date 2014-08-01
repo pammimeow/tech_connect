@@ -21,11 +21,6 @@ foreach($_SESSION['items'] as $item)
 	// finding the xpath value for the itemid	
     $elem = $xml->xpath("/items/item[itemid='$itemid']");
 	
-	
-	
-	
-	
-
 	// get the qtyonhold from xml and substract value from qty in session array elem
 	$qtyonhold = (int)$elem[0]->qtyonhold; 
 	$qtyonhold = $qtyonhold-$qty;
